@@ -1,0 +1,337 @@
+/* Base button style (light mode: soft black on white) */
+.custom-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 48px;
+  padding-left: 50px;
+  padding-right: 20px;
+  background-color: #ffffff;
+  color: #242424;
+  font-size: 16px;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 500;
+
+  border-radius: 24px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}
+
+/* Label animation */
+.custom-button .label {
+  white-space: nowrap;
+  transition: transform 0.4s ease;
+  text-shadow: none;
+  -webkit-text-stroke: 0;
+  stroke: none;
+}
+
+/* Arrow circle and icon */
+.arrow-icon {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  width: 39px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.4s ease;
+  z-index: 2;
+  pointer-events: none;
+  transform: translateY(-50%);
+  background-color: #242424;  /* dark circle */
+  color: #ffffff;             /* white arrow */
+}
+
+/* Arrow SVG sizing and base color */
+.arrow-icon svg {
+  width: 25px;
+  height: 25px;
+  display: block;
+  color: #ffffff; /* Light mode initial arrow color */
+  transition: color 0.4s ease;
+}
+
+/* Hover: invert monochrome scheme */
+.custom-button:hover {
+  background-color: #242424;
+  color: #ffffff;
+}
+
+.custom-button:hover .arrow-icon {
+  background-color: #ffffff;  /* light circle */
+  color: #242424;             /* dark arrow */
+  border-color: #ffffff;
+}
+
+.custom-button:hover .arrow-icon svg {
+  color: #242424; /* ensure arrow color switches on hover */
+}
+
+.custom-button:hover .label {
+  transform: translateX(-40px);
+}
+
+/* ===  SIZING  === */
+
+@media (min-width: 1025px) {
+  .custom-button {
+    height: 48px;
+    font-size: 16px;
+    padding-left: 50px;
+    padding-right: 20px;
+  }
+
+  .arrow-icon {
+    width: 39px;
+    height: 38px;
+  }
+
+  .arrow-icon svg {
+    left: 5px;
+    width: 25px;
+    height: 25px;
+  }
+
+  .custom-button:hover .arrow-icon {
+    left: calc(100% - 43px);
+  }
+
+  .custom-button:hover .label {
+    transform: translateX(-35px);
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  .custom-button {
+    height: 44px;
+    font-size: 15px;
+    padding-left: 46px;
+    padding-right: 18px;
+  }
+
+  .arrow-icon {
+    left: 4px;
+    width: 36px;
+    height: 36px;
+  }
+
+  .arrow-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .custom-button:hover .arrow-icon {
+    left: calc(100% - 40px);
+  }
+
+  .custom-button:hover .label {
+    transform: translateX(-30px);
+  }
+}
+
+@media (max-width: 767px) {
+  .custom-button {
+    height: 40px;
+    padding-left: 46px;
+    padding-right: 16px;
+  }
+
+  .arrow-icon {
+      left: 3.5px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .arrow-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .custom-button:hover .arrow-icon {
+    left: calc(100% - 35px);
+  }
+
+  .custom-button:hover .label {
+    transform: translateX(-30px);
+  }
+}
+
+
+/* Dark mode: invert colors */
+@media (prefers-color-scheme: dark) {
+  .custom-button {
+    background-color: #242424; /* dark background */
+    color: #ffffff;
+    border-color: #ffffff;
+  }
+
+  .arrow-icon {
+    background-color: #ffffff;  /* light circle */
+    color: #242424;             /* dark arrow */
+  }
+
+  .arrow-icon svg {
+    color: #242424; /* dark arrow inside light circle */
+  }
+
+  .custom-button:hover {
+    background-color: #ffffff;  /* light background */
+    color: #242424;             /* dark text */
+    border-color: #ffffff;
+  }
+
+  .custom-button:hover .arrow-icon {
+    left: calc(100% - 44px);
+    background-color: #242424;  /* dark circle */
+    color: #ffffff;             /* light arrow */
+    border-color: #242424;
+  }
+
+  .custom-button:hover .arrow-icon svg {
+    color: #ffffff; /* ensure arrow color switches on hover in dark mode */
+  }
+
+
+
+@media (min-width: 1025px) {
+  .custom-button {
+    height: 48px;
+    font-size: 16px;
+    padding-left: 50px;
+    padding-right: 20px;
+  }
+
+  .arrow-icon svg {
+    left: 5px;
+    width: 25px;
+    height: 25px;
+  }
+
+  .arrow-icon svg {
+    width: 25px;
+    height: 25px;
+  }
+
+  .custom-button:hover .arrow-icon {
+    left: calc(100% - 43px);
+  }
+
+  .custom-button:hover .label {
+    transform: translateX(-35px);
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  .custom-button {
+    height: 44px;
+    font-size: 15px;
+    padding-left: 46px;
+    padding-right: 18px;
+  }
+
+  .arrow-icon {
+    left: 4px;
+    width: 36px;
+    height: 36px;
+  }
+
+  .arrow-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .custom-button:hover .arrow-icon {
+    left: calc(100% - 40px);
+  }
+
+  .custom-button:hover .label {
+    transform: translateX(-30px);
+  }
+}
+
+@media (max-width: 767px) {
+  .custom-button {
+    height: 40px;
+    padding-left: 46px;
+    padding-right: 16px;
+  }
+
+  .arrow-icon {
+    left: 3.5px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .arrow-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .custom-button:hover .arrow-icon {
+    left: calc(100% - 35px);
+  }
+
+  .custom-button:hover .label {
+    transform: translateX(-30px);
+  }
+}
+
+}
+
+
+
+
+/* From Uiverse.io by barisdogansutcu */
+.purple-button {
+  border-radius: 50px;
+  cursor: pointer;
+  border: 1px;
+  background-color: white;
+  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+  transition: all 0.5s ease;
+}
+
+/* === Responsive Sizing (copied from .custom-button) === */
+@media (min-width: 1025px) {
+  .purple-button {
+    height: 48px;
+    padding-left: 50px;
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  .purple-button {
+    height: 44px;
+    padding-left: 46px;
+    padding-right: 18px;
+  }
+}
+
+@media (max-width: 767px) {
+  .purple-button {
+    height: 40px;
+    padding-left: 46px;
+    padding-right: 16px;
+  }
+}
+
+/* Hover and Active Effects */
+.purple-button:hover {
+  background-color: hsl(261deg 80% 48%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+}
+
+.purple-button:active {
+  background-color: hsl(261deg 80% 48%);
+  color: hsl(0, 0%, 100%);
+  box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+  transform: translateY(10px);
+  transition: 100ms;
+}

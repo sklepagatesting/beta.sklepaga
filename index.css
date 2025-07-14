@@ -1,0 +1,67 @@
+
+
+/* Optional if not using Tailwind */
+#page-transition {
+  transition: transform 0.7s ease-in-out;
+  transform: translateY(-100%);
+}
+
+#page-transition.active {
+  transform: translateY(0%);
+}
+
+
+
+/* DEFAULT (Light Mode) Styles */
+section[data-dark-bg] {
+  background-color: #f1f1f1 !important; /* or a soft light shade */
+}
+
+[data-dark-border] {
+  background-color: #fff; /* Light background */
+  box-shadow: -4px 4px 12px rgba(0, 0, 0, 0.1) !important; /* Shadow left and down */
+}
+
+@media (prefers-color-scheme: dark) {
+  [data-dark-border] {
+    background-color: #242424 !important; /* Dark background */
+    box-shadow: -4px 4px 12px rgba(230, 230, 230, 0.6) !important; /* Light shadow left and down */
+  }
+}
+
+
+
+
+
+/* SECTION BORDER */
+@media (prefers-color-scheme: dark) {
+  section[data-dark-bg] {
+    background-color: #000000 !important;
+  }
+  [data-dark-border] {
+    background-color: #424242 ;
+    border-color: #424242 !important;
+  }
+}
+
+
+
+/* Base: tilt disabled by default (mobile) */
+.card-container {
+  transform: none;
+  transition: transform 0.8s ease;
+  will-change: transform;
+  perspective: 1000px;
+}
+
+/* Enable tilt on larger screens only */
+@media (min-width: 768px) {
+  .card-container.tilt-hover {
+    transition: transform 0.8s ease;
+  }
+
+  .card-container.tilt-hover:hover {
+    transform: rotate3d(1, 1, 0, 5deg) scale(0.97); /* tilt and shrink */
+  }
+}
+

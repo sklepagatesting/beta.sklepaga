@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Updated Nav 1.4</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="navbar\navbar.css">
+  <link rel="stylesheet" href="fonts\fonts.css">
+  <link rel="stylesheet" href="components/buttons.css">
+  <link rel="stylesheet" href="components/icons.css">
+    <link rel="stylesheet" href="components/carousel.css">
+  <link rel="stylesheet" href="animations/animations.css">
+  <link rel="stylesheet" href="animations/zoom.css">
+  <link rel="stylesheet" href="insane/insane.css">
+  <script src="navbar\navbar.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flowbite/dist/flowbite.min.js"></script>
+</head>
+
+<body>
+  <div id="page-transition"
+    class="fixed inset-0 z-[9999] bg-white pointer-events-none transition-transform duration-700 ease-in-out transform -translate-y-full">
+  </div>
+
+
+  <!-- 🌐 NAVIGATION BAR (Smaller) -->
+  <nav id="navbar" class="duration-300 fixed inset-x-0 top-0 z-50 h-12 ">
+
+    <div class="flex items-center justify-between h-full max-w-screen-xl mx-auto px-3 ">
+      <a href="#" class="flex items-center space-x-2">
+        <img src="images/sample-image.jpeg" alt="Logo" class="h-5 w-auto" />
+        <span class="font-theme font-medium">MySite</span>
+      </a>
+      <button id="menu-toggle-btn" type="button"
+        class="font-theme rounded-md hover:bg-[#e8e8e8] dark:hover:bg-[#696969] focus:outline-none"
+        aria-controls="sidebar-multi-level-sidebar" aria-expanded="false">
+        <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path id="menu-icon-path" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- 🧭 SIDEBAR -->
+  <aside id="sidebar-multi-level-sidebar"
+    class="fixed top-12 left-0 z-30 w-[100vw] hidden transition-[max-height] duration-500 bg-white dark:bg-[#242424]"
+    style="height: calc(100vh - 3rem); overflow-y: auto;" aria-label="Sidebar">
+
+    <div class="h-full flex items-center justify-center px-4 py-4 max-w-4xl mx-auto">
+      <div id="sidebar-menu" class="font-theme space-y-5 flex flex-col items-center justify-center">
+
+        <!-- Menu Item 1 -->
+        <div class="sidebar-menu-item flex flex-col items-center">
+          <button class="sidebar-menu-header flex items-center space-x-2 focus:outline-none">
+            <h2 class="subtext-title">Schedules</h2>
+            <svg class="w-5 h-5 stroke-white transition-transform duration-300" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+
+          <div
+            class="font-theme sidebar-menu-body max-h-0 overflow-hidden opacity-0 transition-all duration-500 ease-in-out mt-3 space-y-1 text-center flex flex-col items-center">
+            <a href="#" class="subtext submenu-link inline-block">The 30th year celebration</a>
+            <a href="#" class="subtext submenu-link inline-block">Linggo ng Kabataan</a>
+            <a href="#" class="subtext submenu-link inline-block">Championship League take off</a>
+            <br>
+            <br>
+
+          </div>
+        </div>
+
+        <!-- Menu Item 2 -->
+        <div class="sidebar-menu-item flex flex-col items-center">
+          <button class="sidebar-menu-header flex items-center space-x-2 focus:outline-none">
+            <h2 class="font-theme subtext-title">Articles</h2>
+            <svg class="w-5 h-5 stroke-white transition-transform duration-300" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+
+          <div
+            class="sidebar-menu-body max-h-0 overflow-hidden opacity-0 transition-all duration-500 ease-in-out mt-3 space-y-1 text-center flex flex-col items-center">
+            <a href="#" class="subtext submenu-link block text-[#FFFFF]">The 30th year celebration</a>
+            <a href="#" class="subtext submenu-link block text-[#FFFFF]">Linggo ng Kabataan</a>
+            <a href="#" class="subtext submenu-link block text-[#FFFFF]">Championship League take off</a>
+            <br>
+            <br>
+          </div>
+        </div>
+
+        <!-- Menu Item 3 -->
+        <div class="sidebar-menu-item flex flex-col items-center">
+          <button class="sidebar-menu-header flex items-center space-x-2 focus:outline-none">
+            <h2 class="subtext-title">About</h2>
+            <svg class="w-5 h-5 stroke-white transition-transform duration-300" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+
+          <div
+            class="sidebar-menu-body max-h-0 overflow-hidden opacity-0 transition-all duration-500 ease-in-out mt-3 space-y-1 text-center flex flex-col items-center">
+            <a href="#" class="subtext submenu-link block text-[#FFFFF]">What is SK</a>
+            <a href="#" class="subtext submenu-link block text-[#FFFFF]">SK Officials</a>
+            <a href="#" class="subtext submenu-link block text-[#FFFFF]">About Developers</a>
+            <br>
+            <br>
+          </div>
+        </div>
+
+        <!-- Menu Item 4 -->
+        <div class="sidebar-menu-item flex flex-col items-center">
+          <button class="sidebar-menu-header flex items-center space-x-2 focus:outline-none">
+            <h2 class="subtext-title">Contact</h2>
+            <svg class="w-5 h-5 stroke-white transition-transform duration-300" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+
+          <div
+            class="sidebar-menu-body max-h-0 overflow-hidden opacity-0 transition-all duration-500 ease-in-out mt-3 space-y-1 text-center flex flex-col items-center">
+            <a href="#" class="subtext submenu-link block text-[#FFFFF]">Send a message</a>
+            <a href="#" class="subtext submenu-link block text-[#FFFFF]">Send a feedback</a>
+            <a href="#" class="subtext submenu-link block text-[#FFFFF]">Schedule a meetup</a>
+            <br>
+            <br>
+          </div>
+        </div>
+
+        <!-- Menu Item 5 -->
+        <div class="sidebar-menu-item flex flex-col items-center">
+          <button class="sidebar-menu-header flex items-center space-x-2 focus:outline-none">
+            <h2 class="subtext-title">Site Map</h2>
+            <svg class="w-5 h-5 stroke-white transition-transform duration-300" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+
+          <div
+            class="sidebar-menu-body max-h-0 overflow-hidden opacity-0 transition-all duration-500 ease-in-out mt-3 space-y-1 text-center flex flex-col items-center">
+            <a href="#" class="subtext submenu-link inline-block text-[#FFFFF]">Today's event bbbbbbbbbbbbbbbbbbbbbb</a>
+            <a href="#" class="subtext submenu-link inline-block text-[#FFFFF]">Tomorrow's event</a>
+            <br>
+            <br>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </aside>
+
+
+  <!-- HERO -->
+  <section class="relative h-screen antialiased overflow-hidden">
+    <!-- Solid Background -->
+    <div id="bg-solid" class="absolute inset-0 bg-white transition-opacity duration-1000 z-0"></div>
+
+    <!-- Desktop Video & Image -->
+    <video id="bg-video"
+      class="hidden md:block absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000 z-0"
+      muted autoplay playsinline>
+      <source src="path-to-your-desktop-video.mp4" type="video/mp4" />
+    </video>
+    <div id="bg-image"
+      class="hidden md:block absolute inset-0 bg-cover bg-center bg-no-repeat opacity-0 transition-opacity duration-1000 z-0"
+      style="background-image: url('images/final-image.jpg');"></div>
+
+    <!-- Mobile Video & Image -->
+    <video id="bg-video-mobile"
+      class="md:hidden absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000 z-0" muted
+      autoplay playsinline>
+      <source src="path-to-your-mobile-video.mp4" type="video/mp4" />
+    </video>
+    <div id="bg-image-mobile"
+      class="md:hidden absolute inset-0 bg-cover bg-center bg-no-repeat opacity-0 transition-opacity duration-1000 z-0"
+      style="background-image: url('images/final-image-mobile.jpg');"></div>
+
+    <!-- Content -->
+    <div class="relative z-10 px-4 py-12 md:py-16 h-full flex items-center">
+      <div class="max-w-screen-xl mx-auto w-full flex flex-col items-center text-center space-y-4">
+        <h2 class="hero-heading mt-4 text-white dark:text-white">
+          <span class="text-[#0d0060]">sk</span><span class="text-[#ffd11a]">connect</span>
+        </h2>
+        <h2 class="font-theme subtext-title mt-4 ">
+          Sample subhero description
+        </h2>
+        <br>
+        <!-- Centered Button -->
+        <button id="scroll-down-btn"
+          class="font-theme mt-8 w-12 h-12 flex items-center justify-center rounded-full bg-white/10 border-white/70 hover:bg-white/20 cursor-pointer transition">
+          <svg class="w-6 h-6 font-theme opacity-70" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+              d="M12 19V5m0 14-4-4m4 4 4-4" />
+          </svg>
+        </button>
+
+
+      </div>
+    </div>
+  </section>
+  <!-- END OF HERO -->
+
+  <section class="font-theme px-4 py-8 antialiased md:py-16" style="background-color: #ffffff;" data-dark-bg="#242424">
+    <div class="max-w-screen-xl mx-auto">
+      <h2 class="subtext-title slide-up animate-in mt-4 text-center">Sample subhero description</h2>
+      <h2 class="subtext mt-4 text-center">Sample subhero description</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+
+
+        <!-- SCHEDULES -->
+<a href="navbar.html`">
+  <div class="h-full p-4 md:p-6 rounded-[20px] flex flex-col justify-between group relative cursor-pointer overflow-hidden bg-white shadow-2xl ring-1 ring-gray-900/5 transition-all duration-500 transform hover:scale-[1.10] hover:shadow-3xl max-w-screen-xl" data-dark-border="#242424">
+    <span class="absolute top-3 left-3 z-0 h-24 w-24 md:h-32 md:w-32 rounded-full bg-gradient-to-r from-yellow-500 to-amber-500 opacity-75 transition-all duration-500 transform group-hover:scale-[12]"></span>
+    <div class="relative z-10 mx-auto max-w-md">
+      <span class="relative h-20 w-20 md:h-24 md:w-24 rounded-full overflow-hidden grid place-items-center">
+        <span class="absolute inset-0 bg-gradient-to-r from-yellow-500 to-amber-500 transition-opacity duration-500 ease-in-out group-hover:opacity-0"></span>
+        <span class="absolute inset-0 bg-gradient-to-r from-yellow-400 to-yellow-300 opacity-0 transition-opacity duration-500 ease-in-out group-hover:opacity-100"></span>
+        <svg class="icon relative z-10 text-white transition-colors duration-500 ease-in-out" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+          <path fill-rule="evenodd" d="M6 5V4a1 1 0 1 1 2 0v1h3V4a1 1 0 1 1 2 0v1h3V4a1 1 0 1 1 2 0v1h1a2 2 0 0 1 2 2v2H3V7a2 2 0 0 1 2-2h1ZM3 19v-8h18v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Zm5-6a1 1 0 1 0 0 2h8a1 1 0 1 0 0-2H8Z" clip-rule="evenodd" />
+        </svg>
+      </span>
+      <div class="space-y-6 pt-6 text-lg leading-8 text-[#242424] dark:text-white transition-all duration-500 group-hover:text-white">
+        <p class="subtext mt-4 font-theme">Schedules</p>
+      </div>
+      <div class="pt-6 text-lg subtext leading-7">
+        <p><span class="context text-amber-500 transition-colors duration-500 ease-in-out group-hover:text-white">Explore the latest news and happenings. Explore the latest news and happenings.</span></p>
+      </div>
+<div class="inline-block mt-6 min-h-[3rem]">
+  <button class="px-3 py-1.5 md:px-4 md:py-2 lg:px-5 lg:py-2.5 border-none cursor-pointer transition-transform duration-500 bg-yellow-500 text-white rounded-[20px] relative z-10
+    shadow-[6px_6px_10px_-1px_rgba(0,0,0,0.15),-6px_-6px_10px_-1px_rgba(255,255,255,0.7)]
+    hover:shadow-[inset_4px_4px_6px_-1px_rgba(0,0,0,0.2),inset_-4px_-4px_6px_-1px_rgba(255,255,255,0.7),-0.5px_-0.5px_0px_rgba(255,255,255,1),0.5px_0.5px_0px_rgba(0,0,0,0.15),0px_12px_10px_-10px_rgba(0,0,0,0.05)] hover:border-[1px] hover:border-solid hover:border-[rgba(0,0,0,0.1)] hover:translate-y-2">
+    Hover me
+  </button>
+</div>
+    </div>
+  </div>
+</a>
+
+        <!-- NEWS -->
+<a href="#">
+  <div class="h-full p-4 md:p-6 rounded-[20px] flex flex-col justify-between group relative cursor-pointer overflow-hidden bg-white shadow-2xl ring-1 ring-gray-900/5 transition-all duration-500 transform hover:scale-[1.10] hover:shadow-3xl max-w-screen-xl" data-dark-border="#242424">
+    <span class="absolute top-3 left-3 z-0 h-24 w-24 md:h-32 md:w-32 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 opacity-75 transition-all duration-500 transform group-hover:scale-[12] md:group-hover:scale-[20]"></span>
+    <div class="relative z-10 mx-auto max-w-md">
+      <span class="relative h-20 w-20 md:h-24 md:w-24 rounded-full overflow-hidden grid place-items-center">
+        <span class="absolute inset-0 bg-gradient-to-r from-green-500 to-emerald-500 transition-opacity duration-500 ease-in-out group-hover:opacity-0"></span>
+        <span class="absolute inset-0 bg-gradient-to-r from-lime-400 to-green-300 opacity-0 transition-opacity duration-500 ease-in-out group-hover:opacity-100"></span>
+        <svg class="icon relative z-10 text-white transition-colors duration-500 ease-in-out" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M5 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11.5c.07 0 .14-.007.207-.021.095.014.193.021.293.021h2a2 2 0 0 0 2-2V7a1 1 0 0 0-1-1h-1a1 1 0 1 0 0 2v11h-2V5a2 2 0 0 0-2-2H5Zm7 4a1 1 0 0 1 1-1h.5a1 1 0 1 1 0 2H13a1 1 0 0 1-1-1Zm0 3a1 1 0 0 1 1-1h.5a1 1 0 1 1 0 2H13a1 1 0 0 1-1-1Zm-6 4a1 1 0 0 1 1-1h6a1 1 0 1 1 0 2H7a1 1 0 0 1-1-1Zm0 3a1 1 0 0 1 1-1h6a1 1 0 1 1 0 2H7a1 1 0 0 1-1-1ZM7 6a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1V7a1 1 0 0 0-1-1H7Zm1 3V8h1v1H8Z" />
+        </svg>
+      </span>
+      <div class="space-y-6 pt-6 text-lg leading-8 text-[#242424] dark:text-white transition-all duration-500 group-hover:text-white">
+        <p class="subtext mt-4 font-theme">News</p>
+      </div>
+      <div class="pt-6 text-lg subtext leading-7">
+        <p><span class="context text-green-500 transition-colors duration-500 ease-in-out group-hover:text-white">Stay updated with the latest news and insightful articles about the youth.</span></p>
+      </div>
+<div class="inline-block mt-6 min-h-[3rem]">
+  <button class="px-3 py-1.5 md:px-4 md:py-2 lg:px-5 lg:py-2.5 border-none cursor-pointer transition-transform duration-500 bg-gradient-to-r from-green-500 to-emerald-500 text-white rounded-[20px] relative z-10
+    shadow-[6px_6px_10px_-1px_rgba(0,0,0,0.15),-6px_-6px_10px_-1px_rgba(255,255,255,0.7)]
+    hover:shadow-[inset_4px_4px_6px_-1px_rgba(0,0,0,0.2),inset_-4px_-4px_6px_-1px_rgba(255,255,255,0.7),-0.5px_-0.5px_0px_rgba(255,255,255,1),0.5px_0.5px_0px_rgba(0,0,0,0.15),0px_12px_10px_-10px_rgba(0,0,0,0.05)] hover:border-[1px] hover:border-solid hover:border-[rgba(0,0,0,0.1)] hover:translate-y-2">
+    Hover me
+  </button>
+</div>
+    </div>
+  </div>
+</a>
+
+
+        <!-- MESSAGE -->
+<a href="#">
+  <div class="h-full p-4 md:p-6 rounded-[20px] flex flex-col justify-between group relative cursor-pointer overflow-hidden bg-white shadow-2xl ring-1 ring-gray-900/5 transition-all duration-500 transform hover:scale-[1.10] hover:shadow-3xl max-w-screen-xl" data-dark-border="#242424">
+    <span class="absolute top-3 left-3 z-0 h-24 w-24 md:h-32 md:w-32 rounded-full bg-gradient-to-r from-blue-500 to-blue-700 opacity-75 transition-all duration-500 transform group-hover:scale-[12] md:group-hover:scale-[20]"></span>
+    <div class="relative z-10 mx-auto max-w-md">
+      <span class="relative h-20 w-20 md:h-24 md:w-24 rounded-full overflow-hidden grid place-items-center">
+        <span class="absolute inset-0 bg-gradient-to-r from-blue-500 to-blue-700 transition-opacity duration-500 ease-in-out group-hover:opacity-0"></span>
+        <span class="absolute inset-0 bg-gradient-to-r from-blue-400 to-blue-600 opacity-0 transition-opacity duration-500 ease-in-out group-hover:opacity-100"></span>
+        <svg class="icon relative z-10 text-white transition-colors duration-500 ease-in-out" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+          <path fill-rule="evenodd" d="M3 5.983C3 4.888 3.895 4 5 4h14c1.105 0 2 .888 2 1.983v8.923a1.992 1.992 0 0 1-2 1.983h-6.6l-2.867 2.7c-.955.899-2.533.228-2.533-1.08v-1.62H5c-1.105 0-2-.888-2-1.983V5.983Zm5.706 3.809a1 1 0 1 0-1.412 1.417 1 1 0 1 0 1.412-1.417Zm2.585.002a1 1 0 1 1 .003 1.414 1 1 0 0 1-.003-1.414Zm5.415-.002a1 1 0 1 0-1.412 1.417 1 1 0 1 0 1.412-1.417Z" clip-rule="evenodd" />
+        </svg>
+      </span>
+      <div class="space-y-6 pt-6 text-lg leading-8 text-[#242424] dark:text-white transition-all duration-500 group-hover:text-white">
+        <p class="subtext mt-4 font-theme">Message</p>
+      </div>
+      <div class="pt-6 text-lg subtext leading-7">
+        <p><span class="context text-blue-500 transition-colors duration-500 ease-in-out group-hover:text-white">We’d love to hear from you. Share your message or feedback with us anytime.</span></p>
+      </div>
+<div class="inline-block mt-6 min-h-[3rem]">
+  <button class="px-3 py-1.5 md:px-4 md:py-2 lg:px-5 lg:py-2.5 border-none cursor-pointer transition-transform duration-500 bg-gradient-to-r from-blue-500 to-blue-700 text-white rounded-[20px] relative z-10
+    shadow-[6px_6px_10px_-1px_rgba(0,0,0,0.15),-6px_-6px_10px_-1px_rgba(255,255,255,0.7)]
+    hover:shadow-[inset_4px_4px_6px_-1px_rgba(0,0,0,0.2),inset_-4px_-4px_6px_-1px_rgba(255,255,255,0.7),-0.5px_-0.5px_0px_rgba(255,255,255,1),0.5px_0.5px_0px_rgba(0,0,0,0.15),0px_12px_10px_-10px_rgba(0,0,0,0.05)] hover:border-[1px] hover:border-solid hover:border-[rgba(0,0,0,0.1)] hover:translate-y-2">
+    Hover me
+  </button>
+</div>
+    </div>
+  </div>
+</a>
+      </div>
+    </div>
+  </section>
+
+<section class="font-theme px-4 py-8 antialiased md:py-16" style="background-color: #ffffff;" data-dark-bg="#242424">
+  <div class="max-w-screen-xl mx-auto">
+    <h2 class="subtext-title slide-up animate-in mt-4 text-center">Sample subhero description</h2>
+    <h2 class="subtext mt-4 text-center">Sample subhero description</h2>
+
+    <div class="grid max-h-screen grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-6 mt-8"></div>
+
+    <a href="">
+    <div class="zoom parallax flex flex-col mx-auto overflow-hidden rounded-[20px] relative z-10"
+         data-dark-border="#242424"
+         style="background-image: url('images/sample-image.jpeg'); background-size: cover; background-position: center; min-height: 100vh; height: 10%;">
+
+    </div>
+  </div>
+  </a>
+
+  <div class="container max-w-5xl px-4 py-12 mx-auto">
+    <div class="grid gap-4 mx-4 sm:grid-cols-12">
+      <div class="col-span-12 sm:col-span-3">
+        <div class="text-center sm:text-left mb-14 before:block before:w-24 before:h-3 before:mb-5 before:rounded-md before:mx-auto sm:before:mx-0 before:bg-violet-600 dark:before:bg-violet-400">
+          <h3 class="fly-in subtext">Morbi tempor</h3>
+          <span class="context font-bold text-gray-500 dark:text-gray-400">Vestibulum diam nunc</span>
+        </div>
+      </div>
+      <div class="relative col-span-12 px-4 space-y-6 sm:col-span-9">
+        <div class="col-span-12 space-y-12 relative px-4 sm:col-span-8 sm:space-y-8 sm:before:absolute sm:before:top-2 sm:before:bottom-0 sm:before:w-0.5 sm:before:-left-3 before:bg-gray-300 dark:before:bg-gray-700">
+          <!-- Item 1 -->
+          <div class="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-violet-600 dark:before:bg-violet-400">
+            <h3 class="fly-in context font-bold">Donec porta enim vel</h3>
+            <time class="text-xs uppercase text-gray-500 dark:text-gray-400 mt-3 mb-1">Dec 2020</time>
+            <p class="left-in context text-gray-500 dark:text-gray-400">Pellentesque feugiat ante at nisl efficitur, in mollis orci scelerisque. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+          </div>
+          <!-- Item 2 -->
+          <div class="left-in flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-violet-600 dark:before:bg-violet-400">
+            <h3 class="fly-in context font-bold">Aliquam sit amet nunc ut</h3>
+            <time class="text-xs uppercase text-gray-500 dark:text-gray-400 mt-3 mb-1">Jul 2019</time>
+            <p class="left-in context text-gray-500 dark:text-gray-400">Morbi vulputate aliquam libero non dictum. Aliquam sit amet nunc ut diam aliquet tincidunt nec nec dui. Donec mollis turpis eget egestas sodales.</p>
+          </div>
+          <!-- Item 3 -->
+          <div class="left-in flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-violet-600 dark:before:bg-violet-400">
+            <h3 class="fly-in context font-bold">Pellentesque habitant morbi</h3>
+            <time class="text-xs uppercase text-gray-500 dark:text-gray-400 mt-3 mb-1">Jan 2016</time>
+            <p class="left-in context text-gray-500 dark:text-gray-400">Suspendisse tincidunt, arcu nec faucibus efficitur, justo velit consectetur nisl, sit amet condimentum lacus orci nec purus. Mauris quis quam suscipit, vehicula felis id, vehicula enim.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- IMAGE CARD -->
+  <section class="font-theme px-4 py-8 antialiased md:py-16" style="background-color: #ffffff;" data-dark-bg="#242424">
+    <div class="max-w-screen-xl mx-auto">
+      <h2 class="subtext-title mt-4">Sample subhero description</h2>
+      <h2 class="subtext fly-in mt-4">Sample subhero description</h2>
+
+      <div class="grid grid-cols-1 gap-6 mt-8 md:grid-cols-2 lg:grid-cols-2">
+
+        <!-- Image 1 -->
+<a href="navbar.html"
+  class="zoom card-container tilt-hover relative h-96 p-4 md:p-6 rounded-[20px] overflow-hidden block bg-white dark:bg-[#242424] shadow-[0px_4px_12px_rgba(0,0,0,0.1)] dark:shadow-[0px_4px_12px_rgba(230,230,230,0.6)] z-10"
+  data-dark-border="#242424">
+  <img src="images/sample-image.jpeg" alt="Logo" class="absolute inset-0 w-full h-full object-cover " />
+  <div class="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#242424] to-transparent"></div>
+  <div class="absolute top-4 left-4 z-20 md:top-5 md:left-6">
+    <span class="inline-flex items-center gap-2 px-4 py-2 text-xs subtext rounded-full shadow-md bg-[#242424] text-white dark:bg-white dark:text-black">
+      <span>Politics</span><span class="opacity-70">· 04 Aug</span>
+    </span>
+  </div>
+  <div class="absolute top-4 right-4 z-20 md:top-5 md:right-6">
+    <div class="flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-[#242424] dark:bg-[#fff]">
+      <svg class="w-6 h-6 text-[#fff] dark:text-[#242424] rotate-[45deg]" fill="none" viewBox="0 0 24 24">
+        <path d="M12 6v13m0-13 4 4m-4-4-4 4" stroke="currentColor" stroke-linecap="round"
+          stroke-linejoin="round" stroke-width="2" />
+      </svg>
+    </div>
+  </div>
+  <div class="absolute bottom-4 left-4 right-4 z-20 md:bottom-6 md:left-6 md:right-6">
+    <span class="underlines subtext text-white">Anniversary Celebration</span>
+  </div>
+</a>
+
+
+                <!-- Image 2 -->
+<a href="navbar.html"
+  class="zoom card-container tilt-hover relative h-96 p-4 md:p-6 rounded-[20px] overflow-hidden block bg-white dark:bg-[#242424] shadow-[0px_4px_12px_rgba(0,0,0,0.1)] dark:shadow-[0px_4px_12px_rgba(230,230,230,0.6)] z-10"
+  data-dark-border="#242424">
+  <img src="images/sample-image.jpeg" alt="Logo" class="absolute inset-0 w-full h-full object-cover " />
+  <div class="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#242424] to-transparent"></div>
+  <div class="absolute top-4 left-4 z-20 md:top-5 md:left-6">
+    <span class="inline-flex items-center gap-2 px-4 py-2 text-xs subtext rounded-full shadow-md bg-[#242424] text-white dark:bg-white dark:text-black">
+      <span>Politics</span><span class="opacity-70">· 04 Aug</span>
+    </span>
+  </div>
+  <div class="absolute top-4 right-4 z-20 md:top-5 md:right-6">
+    <div class="flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-[#242424] dark:bg-[#fff]">
+      <svg class="w-6 h-6 text-[#fff] dark:text-[#242424] rotate-[45deg]" fill="none" viewBox="0 0 24 24">
+        <path d="M12 6v13m0-13 4 4m-4-4-4 4" stroke="currentColor" stroke-linecap="round"
+          stroke-linejoin="round" stroke-width="2" />
+      </svg>
+    </div>
+  </div>
+  <div class="absolute bottom-4 left-4 right-4 z-20 md:bottom-6 md:left-6 md:right-6">
+    <span class="underlines subtext text-white">Anniversary Celebration</span>
+  </div>
+</a>
+
+                <!-- Image 3 -->
+<a href="navbar.html"
+  class="zoom card-container tilt-hover relative h-96 p-4 md:p-6 rounded-[20px] overflow-hidden block bg-white dark:bg-[#242424] shadow-[0px_4px_12px_rgba(0,0,0,0.1)] dark:shadow-[0px_4px_12px_rgba(230,230,230,0.6)] z-10"
+  data-dark-border="#242424">
+  <img src="images/sample-image.jpeg" alt="Logo" class="absolute inset-0 w-full h-full object-cover " />
+  <div class="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#242424] to-transparent"></div>
+  <div class="absolute top-4 left-4 z-20 md:top-5 md:left-6">
+    <span class="inline-flex items-center gap-2 px-4 py-2 text-xs subtext rounded-full shadow-md bg-[#242424] text-white dark:bg-white dark:text-black">
+      <span>Politics</span><span class="opacity-70">· 04 Aug</span>
+    </span>
+  </div>
+  <div class="absolute top-4 right-4 z-20 md:top-5 md:right-6">
+    <div class="flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-[#242424] dark:bg-[#fff]">
+      <svg class="w-6 h-6 text-[#fff] dark:text-[#242424] rotate-[45deg]" fill="none" viewBox="0 0 24 24">
+        <path d="M12 6v13m0-13 4 4m-4-4-4 4" stroke="currentColor" stroke-linecap="round"
+          stroke-linejoin="round" stroke-width="2" />
+      </svg>
+    </div>
+  </div>
+  <div class="absolute bottom-4 left-4 right-4 z-20 md:bottom-6 md:left-6 md:right-6">
+    <span class="underlines subtext text-white">Anniversary Celebration</span>
+  </div>
+</a>
+
+                        <!-- Image 4 -->
+<a href="navbar.html"
+  class="zoom card-container tilt-hover relative h-96 p-4 md:p-6 rounded-[20px] overflow-hidden block bg-white dark:bg-[#242424] shadow-[0px_4px_12px_rgba(0,0,0,0.1)] dark:shadow-[0px_4px_12px_rgba(230,230,230,0.6)] z-10"
+  data-dark-border="#242424">
+  <img src="images/sample-image.jpeg" alt="Logo" class="absolute inset-0 w-full h-full object-cover " />
+  <div class="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#242424] to-transparent"></div>
+  <div class="absolute top-4 left-4 z-20 md:top-5 md:left-6">
+    <span class="inline-flex items-center gap-2 px-4 py-2 text-xs subtext rounded-full shadow-md bg-[#242424] text-white dark:bg-white dark:text-black">
+      <span>Politics</span><span class="opacity-70">· 04 Aug</span>
+    </span>
+  </div>
+  <div class="absolute top-4 right-4 z-20 md:top-5 md:right-6">
+    <div class="flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-[#242424] dark:bg-[#fff]">
+      <svg class="w-6 h-6 text-[#fff] dark:text-[#242424] rotate-[45deg]" fill="none" viewBox="0 0 24 24">
+        <path d="M12 6v13m0-13 4 4m-4-4-4 4" stroke="currentColor" stroke-linecap="round"
+          stroke-linejoin="round" stroke-width="2" />
+      </svg>
+    </div>
+  </div>
+  <div class="absolute bottom-4 left-4 right-4 z-20 md:bottom-6 md:left-6 md:right-6">
+    <span class="underlines subtext text-white">Anniversary Celebration</span>
+  </div>
+</a>
+
+    </div>
+  </section>
+
+
+
+<!-- CARD CAROUSEL -->
+  <section class="font-theme px-4 py-8 antialiased md:py-16" style="background-color: #ffffff;" data-dark-bg="#242424">
+        <div class="max-w-screen-xl mx-auto">
+        <h2 class="subtext-title mt-4">Sample subhero description</h2>
+      <h2 class="subtext mt-4 mb-8">Sample subhero description</h2>
+    </div>
+<div class="w-full relative overflow-hidden">
+
+   <div class="w-full max-w-screen-xl mx-auto relative overflow-hidden">
+  <div id="carouselCards" class="flex gap-6 flex-nowrap min-w-0 overflow-x-auto scroll-smooth no-scrollbar transition-all duration-700 ease-in-out cursor-grab active:cursor-grabbing">
+
+    <!-- Card 1 --> 
+<a href="navbar.html" class="zoom card-containers tilt-hover relative h-[576px] p-4 md:p-6 rounded-[20px] overflow-hidden block bg-white dark:bg-[#242424] z-10 w-[85%] sm:w-[300px] hover:cursor-pointer hover:shadow-md transition-shadow duration-300 group">
+  <img src="images/sample-image.jpeg" alt="Logo" class="absolute inset-0 w-full h-full object-cover transition-all duration-300 group-hover:blur-[1px]" />
+  <div class="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#242424] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+  <div class="absolute top-4 left-4 z-20 md:top-5 md:left-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+    <span class="inline-flex items-center gap-2 px-4 py-2 text-xs subtext rounded-full shadow-md bg-[#242424] text-white dark:bg-white dark:text-black">
+      <span>Politics</span><span class="opacity-70">· 04 Aug</span>
+    </span>
+  </div>
+  <div class="absolute top-4 right-4 z-20 md:top-5 md:right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+    <div class="flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-[#242424] dark:bg-[#fff]">
+      <svg class="w-6 h-6 text-[#fff] dark:text-[#242424] rotate-[45deg]" fill="none" viewBox="0 0 24 24">
+        <path d="M12 6v13m0-13 4 4m-4-4-4 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+      </svg>
+    </div>
+  </div>
+  <div class="absolute bottom-4 left-4 right-4 z-20 md:bottom-6 md:left-6 md:right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+    <span class="underlines subtext text-white">Anniversary Celebration</span>
+  </div>
+</a>
+
+<!-- Card 3 -->    
+<a href="navbar.html" class="zoom card-containers tilt-hover relative h-[576px] p-4 md:p-6 rounded-[20px] overflow-hidden block bg-white dark:bg-[#242424] z-10 w-[85%] sm:w-[300px] hover:cursor-pointer hover:shadow-md transition-shadow duration-300 group">
+  <img src="images/sample-image.jpeg" alt="Logo" class="absolute inset-0 w-full h-full object-cover transition-all duration-300 group-hover:blur-[1px]" />
+  <div class="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#242424] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+  <div class="absolute top-4 left-4 z-20 md:top-5 md:left-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+    <span class="inline-flex items-center gap-2 px-4 py-2 text-xs subtext rounded-full shadow-md bg-[#242424] text-white dark:bg-white dark:text-black">
+      <span>Politics</span><span class="opacity-70">· 04 Aug</span>
+    </span>
+  </div>
+  <div class="absolute top-4 right-4 z-20 md:top-5 md:right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+    <div class="flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-[#242424] dark:bg-[#fff]">
+      <svg class="w-6 h-6 text-[#fff] dark:text-[#242424] rotate-[45deg]" fill="none" viewBox="0 0 24 24">
+        <path d="M12 6v13m0-13 4 4m-4-4-4 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+      </svg>
+    </div>
+  </div>
+  <div class="absolute bottom-4 left-4 right-4 z-20 md:bottom-6 md:left-6 md:right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+    <span class="underlines subtext text-white">Anniversary Celebration</span>
+  </div>
+</a>
+
+<!-- Card 4 -->    
+<a href="navbar.html" class="zoom card-containers tilt-hover relative h-[576px] p-4 md:p-6 rounded-[20px] overflow-hidden block bg-white dark:bg-[#242424] z-10 w-[85%] sm:w-[300px] hover:cursor-pointer hover:shadow-md transition-shadow duration-300 group">
+  <img src="images/sample-image.jpeg" alt="Logo" class="absolute inset-0 w-full h-full object-cover transition-all duration-300 group-hover:blur-[1px]" />
+  <div class="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#242424] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+  <div class="absolute top-4 left-4 z-20 md:top-5 md:left-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+    <span class="inline-flex items-center gap-2 px-4 py-2 text-xs subtext rounded-full shadow-md bg-[#242424] text-white dark:bg-white dark:text-black">
+      <span>Politics</span><span class="opacity-70">· 04 Aug</span>
+    </span>
+  </div>
+  <div class="absolute top-4 right-4 z-20 md:top-5 md:right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+    <div class="flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-[#242424] dark:bg-[#fff]">
+      <svg class="w-6 h-6 text-[#fff] dark:text-[#242424] rotate-[45deg]" fill="none" viewBox="0 0 24 24">
+        <path d="M12 6v13m0-13 4 4m-4-4-4 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+      </svg>
+    </div>
+  </div>
+  <div class="absolute bottom-4 left-4 right-4 z-20 md:bottom-6 md:left-6 md:right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+    <span class="underlines subtext text-white">Anniversary Celebration</span>
+  </div>
+</a>
+
+  <!-- Card 5 -->    
+<a href="navbar.html" class="zoom card-containers tilt-hover relative h-[576px] p-4 md:p-6 rounded-[20px] overflow-hidden block bg-white dark:bg-[#242424] z-10 w-[85%] sm:w-[300px] hover:cursor-pointer hover:shadow-md transition-shadow duration-300 group">
+  <img src="images/sample-image.jpeg" alt="Logo" class="absolute inset-0 w-full h-full object-cover transition-all duration-300 group-hover:blur-[1px]" />
+  <div class="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#242424] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+  <div class="absolute top-4 left-4 z-20 md:top-5 md:left-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+    <span class="inline-flex items-center gap-2 px-4 py-2 text-xs subtext rounded-full shadow-md bg-[#242424] text-white dark:bg-white dark:text-black">
+      <span>Politics</span><span class="opacity-70">· 04 Aug</span>
+    </span>
+  </div>
+  <div class="absolute top-4 right-4 z-20 md:top-5 md:right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+    <div class="flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-[#242424] dark:bg-[#fff]">
+      <svg class="w-6 h-6 text-[#fff] dark:text-[#242424] rotate-[45deg]" fill="none" viewBox="0 0 24 24">
+        <path d="M12 6v13m0-13 4 4m-4-4-4 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+      </svg>
+    </div>
+  </div>
+  <div class="absolute bottom-4 left-4 right-4 z-20 md:bottom-6 md:left-6 md:right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+    <span class="underlines subtext text-white">Anniversary Celebration</span>
+  </div>
+</a>
+
+ <!-- Card 6 -->    
+<a href="navbar.html" class="zoom card-containers tilt-hover relative h-[576px] p-4 md:p-6 rounded-[20px] overflow-hidden block bg-white dark:bg-[#242424] z-10 w-[85%] sm:w-[300px] hover:cursor-pointer hover:shadow-md transition-shadow duration-300 group">
+  <img src="images/sample-image.jpeg" alt="Logo" class="absolute inset-0 w-full h-full object-cover transition-all duration-300 group-hover:blur-[1px]" />
+  <div class="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#242424] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+  <div class="absolute top-4 left-4 z-20 md:top-5 md:left-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+    <span class="inline-flex items-center gap-2 px-4 py-2 text-xs subtext rounded-full shadow-md bg-[#242424] text-white dark:bg-white dark:text-black">
+      <span>Politics</span><span class="opacity-70">· 04 Aug</span>
+    </span>
+  </div>
+  <div class="absolute top-4 right-4 z-20 md:top-5 md:right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+    <div class="flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-[#242424] dark:bg-[#fff]">
+      <svg class="w-6 h-6 text-[#fff] dark:text-[#242424] rotate-[45deg]" fill="none" viewBox="0 0 24 24">
+        <path d="M12 6v13m0-13 4 4m-4-4-4 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+      </svg>
+    </div>
+  </div>
+  <div class="absolute bottom-4 left-4 right-4 z-20 md:bottom-6 md:left-6 md:right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+    <span class="underlines subtext text-white">Anniversary Celebration</span>
+  </div>
+</a>
+
+ <!-- Card 7 -->    
+<a href="navbar.html" class="zoom card-containers tilt-hover relative h-[576px] p-4 md:p-6 rounded-[20px] overflow-hidden block bg-white dark:bg-[#242424] z-10 w-[85%] sm:w-[300px] hover:cursor-pointer hover:shadow-md transition-shadow duration-300 group">
+  <img src="images/sample-image.jpeg" alt="Logo" class="absolute inset-0 w-full h-full object-cover transition-all duration-300 group-hover:blur-[1px]" />
+  <div class="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#242424] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+  <div class="absolute top-4 left-4 z-20 md:top-5 md:left-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+    <span class="inline-flex items-center gap-2 px-4 py-2 text-xs subtext rounded-full shadow-md bg-[#242424] text-white dark:bg-white dark:text-black">
+      <span>Politics</span><span class="opacity-70">· 04 Aug</span>
+    </span>
+  </div>
+  <div class="absolute top-4 right-4 z-20 md:top-5 md:right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+    <div class="flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-[#242424] dark:bg-[#fff]">
+      <svg class="w-6 h-6 text-[#fff] dark:text-[#242424] rotate-[45deg]" fill="none" viewBox="0 0 24 24">
+        <path d="M12 6v13m0-13 4 4m-4-4-4 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+      </svg>
+    </div>
+  </div>
+  <div class="absolute bottom-4 left-4 right-4 z-20 md:bottom-6 md:left-6 md:right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+    <span class="underlines subtext text-white">Anniversary Celebration</span>
+  </div>
+</a>
+
+ <!-- Card 8 -->    
+<a href="navbar.html" class="zoom card-containers tilt-hover relative h-[576px] p-4 md:p-6 rounded-[20px] overflow-hidden block bg-white dark:bg-[#242424] z-10 w-[85%] sm:w-[300px] hover:cursor-pointer hover:shadow-md transition-shadow duration-300 group">
+  <img src="images/sample-image.jpeg" alt="Logo" class="absolute inset-0 w-full h-full object-cover transition-all duration-300 group-hover:blur-[1px]" />
+  <div class="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-[#242424] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+  <div class="absolute top-4 left-4 z-20 md:top-5 md:left-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+    <span class="inline-flex items-center gap-2 px-4 py-2 text-xs subtext rounded-full shadow-md bg-[#242424] text-white dark:bg-white dark:text-black">
+      <span>Politics</span><span class="opacity-70">· 04 Aug</span>
+    </span>
+  </div>
+  <div class="absolute top-4 right-4 z-20 md:top-5 md:right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+    <div class="flex items-center justify-center w-8 h-8 rounded-full shadow-md bg-[#242424] dark:bg-[#fff]">
+      <svg class="w-6 h-6 text-[#fff] dark:text-[#242424] rotate-[45deg]" fill="none" viewBox="0 0 24 24">
+        <path d="M12 6v13m0-13 4 4m-4-4-4 4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+      </svg>
+    </div>
+  </div>
+  <div class="absolute bottom-4 left-4 right-4 z-20 md:bottom-6 md:left-6 md:right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+    <span class="underlines subtext text-white">Anniversary Celebration</span>
+  </div>
+</a>
+
+</div>
+    
+<div class="flex justify-end mt-4 gap-3">
+  <!-- Prev Button -->
+<!-- Prev Button -->
+<button id="prevArrow"
+  class="h-10 w-10 flex items-center justify-center rounded-full bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-800 dark:text-white focus:outline-none opacity-100 transition-opacity duration-300 disabled:opacity-40 disabled:pointer-events-none">
+  <svg class="w-4 h-4 mx-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" fill="none">
+    <path d="M7 1L3 5l4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+  <span class="sr-only">Previous</span>
+</button>
+
+
+  <!-- Next Button -->
+  <button id="nextArrow"
+    class="h-10 w-10 flex items-center justify-center rounded-full bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-800 dark:text-white focus:outline-none">
+    <svg class="w-4 h-4 mx-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" fill="none">
+      <path d="M3 9l4-4-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <span class="sr-only">Next</span>
+  </button>
+</div>
+  
+
+  <!-- Hide Scrollbar CSS -->
+  <style>
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</section>
+
+
+  <section class="font-theme px-4 py-8 antialiased md:py-16" style="background-color: #ffffff;" data-dark-bg="#242424">
+    <div class="max-w-screen-xl mx-auto text-center">
+      <h2 class="subtext-title mt-4">Sample subhero description</h2>
+      <h2 class="subtext mt-4">Sample subhero description</h2>
+
+      <div class="grid grid-cols-1 gap-6 mt-8 md:grid-cols-2 lg:grid-cols-3">
+
+        <!-- card 1 -->
+<a href="#" class="card-wrapper group p-4 md:p-6 rounded-[20px]" data-dark-border="#242424">
+  <div class="hover-circle group-hover"></div>
+  <p class="subtext mt-4 relative text-[#242424] group-hover:text-white dark:text-white smooth-text z-10">This
+    is heading</p>
+  <p class="context mt-4 mb-6 relative text-[#242424] group-hover:text-white/80 dark:text-white smooth-text z-10">
+    Card description with lots of great facts and interesting details.</p>
+  <div class="arrow-corner transition-transform duration-500 group-hover:rotate-[-405deg] group-hover:scale-125">
+    <div class="text-white text-xl font-large">
+      <svg class="w-[38px] h-[38px] text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+        width="24" height="24" fill="none" viewBox="0 0 24 24">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+          d="M19 12H5m14 0-4 4m4-4-4-4" />
+      </svg>
+    </div>
+  </div>
+</a>
+
+        <!-- card 2 -->
+<a href="#" class="card-wrapper group p-4 md:p-6 rounded-[20px]" data-dark-border="#242424">
+  <div class="hover-circle group-hover"></div>
+  <p class="subtext mt-4 relative text-[#242424] group-hover:text-white dark:text-white smooth-text z-10">This
+    is heading</p>
+  <p class="context mt-4 mb-6 relative text-[#242424] group-hover:text-white/80 dark:text-white smooth-text z-10">
+    Card description with lots of great facts and interesting details.</p>
+  <div class="arrow-corner transition-transform duration-500 group-hover:rotate-[-405deg] group-hover:scale-125">
+    <div class="text-white text-xl font-large">
+      <svg class="w-[38px] h-[38px] text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+        width="24" height="24" fill="none" viewBox="0 0 24 24">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+          d="M19 12H5m14 0-4 4m4-4-4-4" />
+      </svg>
+    </div>
+  </div>
+</a>
+
+        <!-- card 3 -->
+<a href="#" class="card-wrapper group p-4 md:p-6 rounded-[20px]" data-dark-border="#242424">
+  <div class="hover-circle group-hover"></div>
+  <p class="subtext mt-4 relative text-[#242424] group-hover:text-white dark:text-white smooth-text z-10">This
+    is heading</p>
+  <p class="context mt-4 mb-6 relative text-[#242424] group-hover:text-white/80 dark:text-white smooth-text z-10">
+    Card description with lots of great facts and interesting details.</p>
+      <button class="context group relative inline-block px-3 py-1.5 md:px-4 md:py-2 lg:px-5 lg:py-2.5 border-2 border-dashed border-transparent bg-white text-black rounded-[20px] shadow-sm transition-all ease-in-out duration-400 delay-100 hover:border-[#242424] hover:bg-white/50 hover:text-black active:bg-gray-100 mt-6">
+  This is a sample of longer button name
+</button>
+  <div class="arrow-corner transition-transform duration-500 group-hover:rotate-[-405deg] group-hover:scale-125">
+    <div class="text-white text-xl font-large">
+      <svg class="w-[38px] h-[38px] text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+        width="24" height="24" fill="none" viewBox="0 0 24 24">
+        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"
+          d="M19 12H5m14 0-4 4m4-4-4-4" />
+      </svg>
+    </div>
+  </div>
+</a>
+
+
+      </div>
+    </div>
+  </section>
+
+  <section class="text-white px-4 py-8 antialiased md:py-16" style="background-color: #242424;">
+    <div class="max-w-screen-xl mx-auto text-center">
+      <h2 class="subtext-title mt-4 text-[#ff6b00]">Sample subhero description</h2>
+      <h2 class="subtext mt-4">Sample subhero description</h2>
+
+      <div class="flex flex-wrap justify-center gap-6 mt-8">
+        <!-- From Uiverse.io by gharsh11032000 -->
+        <div class="text-white bgcard">
+          <p class="bgheader subtext">UI Blog's</p>
+          <div class="bgmain-content">
+            <p class="bgheading context">How to make a simple ui card?</p>
+          </div>
+          <div class="bgfooter context">by Harsh Gupta</div>
+        </div>
+
+        <!-- From Uiverse.io by gharsh11032000 -->
+        <div class="text-white bgcard">
+          <p class="bgheader subtext">UI Blog's</p>
+          <div class="bgmain-content">
+            <p class="bgheading context">How to make a simple ui card?</p>
+          </div>
+          <div class="bgfooter context">by Harsh Gupta</div>
+        </div>
+
+        <!-- From Uiverse.io by gharsh11032000 -->
+        <div class="text-white bgcard">
+          <p class="bgheader subtext">UI Blog's</p>
+          <div class="bgmain-content">
+            <p class="bgheading context">How to make a simple ui card?</p>
+          </div>
+          <div class="bgfooter context">by Harsh Gupta</div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const transitionEl = document.getElementById('page-transition');
+
+    // On load, slide up to reveal the page
+    window.addEventListener('DOMContentLoaded', () => {
+      transitionEl.style.transform = 'translateY(-100%)';
+    });
+
+    // On all <a> clicks, apply the curtain and delay navigation
+    document.querySelectorAll('a[href]').forEach(link => {
+      link.addEventListener('click', e => {
+        const href = link.getAttribute('href');
+
+        // Skip links that shouldn't trigger a transition
+        if (
+          href.startsWith('#') || // anchor links
+          href.startsWith('javascript:') ||
+          link.target === '_blank'
+        ) return;
+
+        e.preventDefault();
+        transitionEl.style.transform = 'translateY(0%)';
+
+        setTimeout(() => {
+          window.location.href = href;
+        }, 700); // match transition duration
+      });
+    });
+  </script>
+
+</body>
+<script src="index.js"></script>
+<script src="animations/animations.js"></script>
+<script src="components/components.js"></script>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Flowbite JS (requires Tailwind + Alpine or Vanilla JS) -->
+<script src="https://unpkg.com/flowbite@2.3.0/dist/flowbite.min.js"></script>
+
+</html>

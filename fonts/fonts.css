@@ -1,0 +1,133 @@
+/* FONTS COLOR*/
+
+.font-theme {
+  color: #242424;
+}
+
+@media (prefers-color-scheme: dark) {
+  .font-theme {
+    color: #ffffff;
+  }
+}
+
+/* Ensure only child elements inherit font-theme's color */
+.font-theme * {
+  color: inherit;
+}
+
+
+
+/* FONTS*/
+.hero-heading {
+  font-size: 60px; /* Mobile base */
+  line-height: 1.1;
+  font-weight: 800; /* Consistent strength */
+  letter-spacing: -4px;
+  font-family: "Inter", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .hero-heading {
+    font-size: 140PX;
+    line-height: 1.08;
+    letter-spacing: -7px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-heading {
+    font-size: 190px;
+    line-height: 1.05;
+    letter-spacing: -10px;
+  }
+}
+
+.subtext-title {
+  font-size: 36px; /* Mobile base */
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-family: "Inter", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .subtext-title {
+    font-size: 41px;
+    line-height: 1.18;
+  }
+}
+
+@media (min-width: 1024px) {
+  .subtext-title {
+    font-size: 51px;
+    line-height: 1.1765005882;
+  }
+}
+
+
+
+
+.subtext {
+  font-size: 27px; /* Mobile base */
+  line-height: 1.38;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-family: "Inter", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .subtext {
+    font-size: 30px;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+  }
+}
+
+@media (min-width: 1024px) {
+  .subtext {
+    font-size: 35px;
+    line-height: 1.25;
+    letter-spacing: -0.03em;
+  }
+}
+
+
+.context {
+  font-size: 18px; /* Mobile first */
+  line-height: 1.45;
+  font-weight: 400;
+  letter-spacing: -0.011em;
+  font-family: "Inter", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .context {
+    font-size: 20px;
+    line-height: 1.42;
+  }
+}
+
+@media (min-width: 1024px) {
+  .context {
+    font-size: 22px;
+    line-height: 1.381002381;
+  }
+}
+
