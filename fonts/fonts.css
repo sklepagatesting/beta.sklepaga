@@ -29,11 +29,11 @@
 
 /* FONTS*/
 .hero-heading {
-  font-size: 60px; /* Mobile base */
-  line-height: 1.2; /* Adjusted: Experiment with 1.1 to 1.25 for 70px.
+  font-size: 40px; /* Mobile base */
+  line-height: 4; /* Adjusted: Experiment with 1.1 to 1.25 for 70px.
                        A common "safe" starting point for display text is around 1.15. */
   font-weight: 550;
-  letter-spacing: -2px;
+  letter-spacing: -1.9px;
   font-family: "Inter", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
   text-align: center;
   -webkit-font-smoothing: antialiased;
@@ -46,7 +46,7 @@
 
 @media (min-width: 768px) {
   .hero-heading {
-    font-size: 110PX;
+    font-size: 90PX;
     line-height: 1.1; /* Adjusted: Experiment with 1.08 to 1.15 for 140px. */
     letter-spacing: -2.5px;
     font-weight: 650;
@@ -55,7 +55,7 @@
 
 @media (min-width: 1024px) {
   .hero-heading {
-    font-size: 150px;
+    font-size: 120px;
     line-height: 1.09; /* Adjusted: Experiment with 1.05 to 1.1 for 150px. */
     letter-spacing: -1.5px;
     font-weight: 700;
