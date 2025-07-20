@@ -1,0 +1,86 @@
+
+
+/* Optional if not using Tailwind */
+#page-transition {
+  transition: transform 0.7s ease-in-out;
+  transform: translateY(-100%);
+}
+
+#page-transition.active {
+  transform: translateY(0%);
+}
+
+
+
+/* DEFAULT (Light Mode) Styles */
+section[data-dark-bg] {
+  background-color: #f1f1f1 !important; /* or a soft light shade */
+}
+
+[data-dark-border] {
+  background-color: #fff; /* Light background */
+  box-shadow: -4px 4px 12px rgba(0, 0, 0, 0.1) !important; /* Shadow left and down */
+}
+
+@media (prefers-color-scheme: dark) {
+  [data-dark-border] {
+    background-color: #242424 !important; /* Dark background */
+  }
+}
+
+
+
+
+
+/* SECTION BORDER */
+@media (prefers-color-scheme: dark) {
+  section[data-dark-bg] {
+    background-color: #000000 !important;
+  }
+  [data-dark-border] {
+    background-color: #424242 ;
+    border-color: #424242 !important;
+  }
+}
+
+
+
+/* Base: tilt disabled by default (mobile) */
+.card-container {
+  transform: none;
+  transition: transform 0.3s ease; /* Reduced time for faster transition */
+  will-change: transform;
+  perspective: 1000px;
+}
+
+/* Enable tilt on larger screens only */
+@media (min-width: 768px) {
+  .card-container.tilt-hover {
+    transition: transform 0.3s ease; /* Transition on hover */
+  }
+
+  .card-container.tilt-hover:hover {
+    transform: rotate3d(1, 1, 0, 5deg) scale(0.97); /* Tilt and shrink on hover */
+  }
+}
+
+
+
+/* IMAGE PARALLAX SIZES */
+  .image-parallax-sizing {
+    background-image: url('https://sklepagatesting.github.io/resources/Images/torchlighting.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+  }
+  @media (max-width: 768px) {
+    .image-parallax-sizing {
+      background-image: url('https://sklepagatesting.github.io/resources/Images/torchlighting.jpg');
+      height: 60vh;
+    }
+  }
+  @media (max-width: 768px) and (orientation: landscape) {
+    .image-parallax-sizing {
+      height: 80vh;
+    }
+  }
